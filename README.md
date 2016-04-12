@@ -22,9 +22,7 @@ gem 'rspec', :require => 'spec'    \# 主文件名和gem名称不一致**
 
 **第三步：利用Bundler从你指定的gem源地址下载安装gem**  
 ```
-$ bundle install
-```  
-```
+$ bundle install  
 $ git add Gemfile Gemfile.lock
 ```  
 
