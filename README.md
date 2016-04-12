@@ -1,4 +1,4 @@
-# Ruby_Bundler（中文参考）[bundler.io](www.bundler.io)
+# Ruby_Bundler（中文参考）[bundler.io](http://www.bundler.io)
 ![](http://bundler.io/images/gembundler.png)
 
 ## Bundler 是什么？
