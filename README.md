@@ -64,4 +64,13 @@ $ bundle config https://gems.example.com/ user:password
     gem 'sqlite3'**  
     
 通过调用 ```Bundler.require``` 来把Gemfile中的gem require到你的项目中，关于 ```Bundler.require``` 详见后文。  
+如果部分gem需要从私有服务器下载，可以通过指定私有地址覆盖缺省的源地址。例如一个私有gem服务器只有一个gem被你引用，可以通过最简单的 ```:source``` 选项指定到对应的gem上：  
+> **gem 'my_gem', '1.0', :source => 'https://gems.example.com'**  
 
+如果有超过一个的gem指向同一个私有地址，可以通过 ```source``` 块将这些gem组织到一起：  
+> **source 'https://gems.example.com' do  
+       gem 'my_gem', '1.0'  
+       gem 'another_gem', '1.2.1'  
+    end**  
+    
+dffa
