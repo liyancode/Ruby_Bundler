@@ -26,7 +26,7 @@ $ bundle install
 $ git add Gemfile Gemfile.lock
 ```  
 
-第一条bundle install命令执行完成之后，所有在Gemfile中指定的依赖gem会被安装到当前的环境中，并且在Gemfile的同级目录下会生成一个新的文件： **_Gemfile.lock_**,这个文件里会详细列出Gem,Platform以及Dependency的信息。  
+第一条 **[bundle install命令](#bundle-install)** 执行完成之后，所有在Gemfile中指定的依赖gem会被安装到当前的环境中，并且在Gemfile的同级目录下会生成一个新的文件： **_Gemfile.lock_**,这个文件里会详细列出Gem,Platform以及Dependency的信息。  
 第二条git命令将Gemfile和Gemfile.lock两个文件添加到你的git版本库中，这样做的好处是，可以确保其他开发者以及在不同的开发环境下，你的项目会依赖到完全相同的第三方库。  
 
 ## 更详细的介绍
