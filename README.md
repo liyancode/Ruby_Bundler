@@ -13,7 +13,7 @@ Bundler使用起来非常简单。
 $ gem install bundler
 ```  
 
-**第二步：在Ruby项目的根目录下新建文件 _Gemfile_（更多关于Gemfile参考后文）**  
+**第二步：在Ruby项目的根目录下新建文件 _Gemfile_（[详细](#gemfile)）**  
 文件内容像下面这样：  
 > **source 'https://rubygems.org'  \# gem源地址  
 gem 'nokogiri'                     \# 被依赖的gem，不指定版本默认安装最新版本  
