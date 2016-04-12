@@ -46,7 +46,7 @@ $ bundle config https://gems.example.com/ user:password
 有些公司配置的gem源，身份信息可以直接写在源地址的URL中：  
 > **source "https://user:password@gems.example.com"**  
 
-**_直接写在URL中的身份信息优先级高于 _**```config```  
+**_直接写在URL中的身份信息优先级高于_** ```config```  
 跟在source后面的就是你要依赖的gem的声明，包括gem名称和版本号，例如：
 > **gem 'nokogiri'  
     gem 'rails', '3.0.0.beta3'  
