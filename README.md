@@ -92,4 +92,13 @@ Git仓库也可以作为有效的gem源地址，只要这个仓库包含可用�
 Gemfile中还可以指定ruby的版本，如果Gemfile被加载在不同版本的ruby环境中，Bundler会报异常并告诉你ruby的版本不对：  
 > **ruby '2.1.0'**  
 
-
+#### bundle install
+在执行 ```bundle install``` 之前，请确保Gemfile中所有依赖对于你的项目来说都是可用的。  
+```
+$ bundle install [--binstubs=PATH] [--clean] [--deployment] [--frozen]  
+                 [--full-index] [--gemfile=FILE] [--local] [--no-cache]  
+                 [--no-prune] [--path=PATH] [--quiet] [--shebang=STRING]  
+                 [--standalone[=GROUP [GROUP...]] [--system]  
+                 [--without=GROUP[ GROUP...]] [--retry=NUMBER]  
+                 [--trust-policy=SECURITYLEVEL]  
+```  
