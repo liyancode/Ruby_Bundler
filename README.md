@@ -1,4 +1,4 @@
-# Ruby_Bundler（中文参考）
+# Ruby_Bundler（中文参考）[bundler.io](www.bundler.io)
 ![](http://bundler.io/images/gembundler.png)
 
 ## Bundler 是什么？
@@ -65,4 +65,5 @@ $ bundle config https://gems.example.com/ user:password
 > **gem 'rspec', :require => false  
     gem 'sqlite3'**  
     
+通过调用 ```Bundler.require``` 来把Gemfile中的gem require到你的项目中，关于 ```Bundler.require``` 详见后文。  
 
