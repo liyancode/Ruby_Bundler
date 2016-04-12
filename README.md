@@ -63,14 +63,23 @@ $ bundle config https://gems.example.com/ user:password
 > **gem 'rspec', :require => false  
     gem 'sqlite3'**  
     
-通过调用 ```Bundler.require``` 来把Gemfile中的gem require到你的项目中，关于 ```Bundler.require``` 详见后文。  
+**通过调用 ```Bundler.require``` 来把Gemfile中的gem require到你的项目中，关于 ```Bundler.require``` 详见后文。**  
 如果部分gem需要从私有服务器下载，可以通过指定私有地址覆盖缺省的源地址。例如一个私有gem服务器只有一个gem被你引用，可以通过最简单的 ```:source``` 选项指定到对应的gem上：  
 > **gem 'my_gem', '1.0', :source => 'https://gems.example.com'**  
 
 如果有超过一个的gem指向同一个私有地址，可以通过 ```source``` 块将这些gem组织到一起：  
 > **source 'https://gems.example.com' do  
-       gem 'my_gem', '1.0'  
-       gem 'another_gem', '1.2.1'  
+       &nbsp;&nbsp;&nbsp;&nbsp;gem 'my_gem', '1.0'  
+       &nbsp;&nbsp;&nbsp;&nbsp;gem 'another_gem', '1.2.1'  
     end**  
     
-dffa
+私有地址的身份信息可以配置在URL中也可以通过 ```bundle config``` 来配置，具体参考前文描述。  
+Git仓库也可以作为有效的gem源地址，只要这个仓库包含可用的gem，可以通过 ```:tag```，```:branch``` 或 ```:ref``` 指定拉取的分支。缺省是 ```master``` 分支：  
+> **gem 'nokogiri', :git => 'https://github.com/tenderlove/nokogiri.git', :branch => '1.4'**  
+
+**如果指定的Git仓库不包含 ```.gemspec``` 文件，bundler会自动创建一个简单的，不包含任何的依赖、不可执行并且没有C扩展。对于简单的gem来说有效，但是复杂一些的就不行。
+如果Git仓库不包含 ```.gemspec``` 文件，最好就不要用这个仓库。***  
+如果想直接使用文件系统中解压好的gem，用 ```:path``` 选项指定包含gem文件的路径：  
+> **gem 'extracted_library', :path => './vendor/extracted_library'**  
+
+
