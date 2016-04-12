@@ -94,6 +94,7 @@ Gemfile中还可以指定ruby的版本，如果Gemfile被加载在不同版本�
 
 #### bundle install
 在执行 ```bundle install``` 之前，请确保Gemfile中所有依赖对于你的项目来说都是可用的。  
+```bundle install``` 执行时可以加以下这些可选的选项：  
 ```
 $ bundle install [--binstubs=PATH] [--clean] [--deployment] [--frozen]  
                  [--full-index] [--gemfile=FILE] [--local] [--no-cache]  
@@ -102,3 +103,24 @@ $ bundle install [--binstubs=PATH] [--clean] [--deployment] [--frozen]
                  [--without=GROUP[ GROUP...]] [--retry=NUMBER]  
                  [--trust-policy=SECURITYLEVEL]  
 ```  
+可选选项：  
+```--binstubs```： 生成被bundle过的gem的存根记录到 ./bin文件夹下  
+```--clean```： 安装完依赖自动执行clean操作  
+```--deployment```： 开发环境和集成环境使用的缺省设置  
+```--frozen```： 安装完成后防止Gemfile.lock文件被更新  
+```--full-index```： Use the rubygems modern index instead of the API endpoint  
+```--gemfile```： Use the specified gemfile instead of Gemfile  
+```--jobs```：  Install gems using parallel workers.  
+```--local```： Do not attempt to fetch gems remotely and use the gem cache instead  
+```--no-cache```： Don't update the existing gem cache.  
+```--no-prune```： Don't remove stale gems from the cache.  
+```--path```： Specify a different path than the system default ($BUNDLE_PATH or $GEM_HOME). Bundler will remember this value for future installs on this machine  
+```--quiet```： Only output warnings and errors.  
+```--retry```： Retry network and git requests that have failed.  
+```--shebang```： Specify a different shebang executable name than the default (usually 'ruby')  
+```--standalone```： Make a bundle that can work without the Bundler runtime  
+```--system```： Install to the system location ($BUNDLE_PATH or $GEM_HOME) even if the bundle was previously installed somewhere else for this application  
+```--trust-policy```： Sets level of security when dealing with signed gems. Accepts `LowSecurity`, `MediumSecurity` and `HighSecurity` as values.  
+```--without```： Exclude gems that are part of the specified named group.  
+
+
